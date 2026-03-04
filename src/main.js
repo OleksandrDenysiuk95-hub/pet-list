@@ -79,14 +79,18 @@ function renderCards(animals, isNewSearch) {
         <p class="pet-species">${pet.species}</p>
         <h3 class="pet-name">${pet.name}</h3>
         <ul class="pet-tags">
-          ${pet.categories ? pet.categories.map(c => `<li>${c.name}</li>`).join('') : ''}
+          ${pet.categories ? pet.categories.map(c => `<div class="pet-tag"><li>${c.name}</li></div>`).join('') : ''}
         </ul>
-        <div class="pet-meta">
-          <span><b>Вік:</b> ${pet.age}</span> | <span><b>Стать:</b> ${pet.gender}</span>
+        
+      <div class="pet-meta">
+          <span>${pet.age}</span>  <span>${pet.gender}</span>
+          </div>
         </div>
+          <div class="pet-descr">
         <p class="pet-short-desc">${pet.shortDescription}</p>
+        </div>
         <button type="button" class="learn-more-btn" data-id="${pet._id}">Дізнатись більше</button>
-      </div>
+      
     </li>
   `
     )
