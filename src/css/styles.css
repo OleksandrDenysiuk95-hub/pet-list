@@ -150,6 +150,11 @@ body {
   line-height: 1.5;
   cursor: pointer;
   transition: all 0.3s ease;
+   -webkit-appearance: none; 
+  appearance: none;
+  background-color: var(--color-scheme-1-background); 
+  color: var(--color-scheme-1-text); 
+  -webkit-tap-highlight-color: transparent;
 }
 
 .pets-list {
