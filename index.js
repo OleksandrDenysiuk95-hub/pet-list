@@ -8,7 +8,9 @@
         <p class="pet-species">${e.species}</p>
         <h3 class="pet-name">${e.name}</h3>
         <ul class="pet-tags">
-          ${e.categories?e.categories.map(t=>`<div class="pet-tag"><li>${t.name}</li></div>`).join(""):""}
+          ${e.categories?e.categories.map(t=>`
+            <li class="pet-tag">${t.name}</li>
+          `).join(""):""}
         </ul>
         
       <div class="pet-meta">
