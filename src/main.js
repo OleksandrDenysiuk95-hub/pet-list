@@ -79,7 +79,17 @@ function renderCards(animals, isNewSearch) {
         <p class="pet-species">${pet.species}</p>
         <h3 class="pet-name">${pet.name}</h3>
         <ul class="pet-tags">
-          ${pet.categories ? pet.categories.map(c => `<div class="pet-tag"><li>${c.name}</li></div>`).join('') : ''}
+          ${
+            pet.categories
+              ? pet.categories
+                  .map(
+                    c => `
+            <li class="pet-tag">${c.name}</li>
+          `
+                  )
+                  .join('')
+              : ''
+          }
         </ul>
         
       <div class="pet-meta">
